@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MoneyMani</string>
     <string name="start_name">MONEY\nMANI</string>
+    <string name="word_title">경제 단어 사전</string>
 </resources>
