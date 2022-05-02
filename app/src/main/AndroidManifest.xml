@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyMani">
         <activity
+            android:name=".StartActivity"
+            android:exported="true" />
+        <activity
             android:name=".WordActivity"
             android:exported="true" />
         <activity
