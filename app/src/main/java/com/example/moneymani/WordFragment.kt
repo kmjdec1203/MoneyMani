@@ -1,35 +1,36 @@
 package com.example.moneymani
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.VERTICAL
 import androidx.recyclerview.widget.RecyclerView
 
+private var viewAdapter: RecyclerView.Adapter<MyAdapter.MyViewHolder>? = null
+private var viewManager: RecyclerView.LayoutManager? = null
 
-class WordFragment : AppCompatActivity() {
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: RecyclerView.Adapter<*>
-    private lateinit var viewManager: RecyclerView.LayoutManager
+class WordFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_word)
-        // 1
-        viewManager = LinearLayoutManager(this, VERTICAL, false)
-        // 2
-        viewAdapter = MyAdapter()
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_word, container, false)
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerview_word)
 
-        // 3
-        recyclerView = findViewById<RecyclerView>(R.id.recyclerview_word).apply {
-            // use this setting to improve performance if you know that changes
-            // in content do not change the layout size of the RecyclerView
-            setHasFixedSize(true)
-            // use a linear layout manager
-            layoutManager = viewManager
-            // specify an viewAdapter (see also next example)
-            adapter = viewAdapter
-
+        recyclerView.apply {
+            viewManager = LinearLayoutManager(activity, VERTICAL, false)
+            viewAdapter = MyAdapter()
         }
+
+        recyclerView.layoutManager = viewManager
+        recyclerView.adapter = viewAdapter
+
+        return view
     }
+
 }
