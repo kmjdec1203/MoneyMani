@@ -1,10 +1,11 @@
-package com.example.moneymani
+package com.example.moneymani.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 
 import android.view.MotionEvent
+import com.example.moneymani.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

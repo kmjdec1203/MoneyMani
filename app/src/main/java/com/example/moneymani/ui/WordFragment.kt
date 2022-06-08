@@ -1,4 +1,4 @@
-package com.example.moneymani
+package com.example.moneymani.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.VERTICAL
 import androidx.recyclerview.widget.RecyclerView
+import com.example.moneymani.R
+import com.example.moneymani.adapter.MyAdapter
 
 private var viewAdapter: RecyclerView.Adapter<MyAdapter.MyViewHolder>? = null
 private var viewManager: RecyclerView.LayoutManager? = null
@@ -32,5 +34,4 @@ class WordFragment : Fragment() {
 
         return view
     }
-
 }

@@ -1,10 +1,11 @@
-package com.example.moneymani
+package com.example.moneymani.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.moneymani.R
 
 class MyAdapter :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
@@ -25,7 +26,7 @@ class MyAdapter :
 
     // 1. Create new views (invoked by the layout manager)
     override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int): MyAdapter.MyViewHolder {
+                                    viewType: Int): MyViewHolder {
         // create a new view
         val cardView = LayoutInflater.from(parent.context)
             .inflate(R.layout.card_layout, parent, false)
