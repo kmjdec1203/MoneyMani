@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".ui.MainActivity"
     android:background="@drawable/background">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginTop="483dp"
         android:layout_marginEnd="208dp"
         android:layout_marginBottom="71dp"
-        android:fontFamily="@font/noto_black"
+        android:textStyle="bold"
         android:text="@string/start_name"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
