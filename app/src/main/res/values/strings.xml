@@ -8,6 +8,10 @@
     <string name="word_name">단어 이름</string>
     <string name="word_mean">단어 뜻입니다.</string>
 
+    // 청년 정책
+    <string name="policy_name">정책 이름입니다.</string>
+    <string name="policy_mean">정책 내용입니다.</string>
+
     // 바텀 네비게이션 바
     <string name="word_page">경제 단어 사전</string>
     <string name="news_page">뉴스</string>
