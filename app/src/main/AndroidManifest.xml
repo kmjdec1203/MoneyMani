@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.moneymani">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MoneyMani">
+        android:theme="@style/Theme.MoneyMani"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".ui.MemoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.TodoActivity"
+            android:exported="true" />
         <activity
             android:name=".ui.StartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.NewsViewActivity"
             android:exported="true" />
         <activity
             android:name=".ui.MainActivity"
